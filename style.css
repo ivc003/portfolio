@@ -132,6 +132,12 @@ p {
   padding-bottom: 5px;
 }
 
+img {
+  width: 100%;    /* Make image width responsive to the container */
+  height: auto;   /* Maintain aspect ratio */
+  max-width: 100%; /* Prevent image from growing larger than its container */
+}
+
 /*
 form, input, textarea, button {
   display: block;
