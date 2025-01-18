@@ -17,7 +17,7 @@ body {
 
 .menu {
   text-align: center;
-  display: flex;
+  justify-content: center;
 }
 
 .menu ul {
@@ -26,6 +26,7 @@ body {
   display: flex;
   list-style: none;
   text-align: center;
+  justify-content: center
 }
 
 
@@ -58,6 +59,17 @@ nav {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+form, input, textarea, button {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+  margin-block: 5px;
 }
 
 input, textarea, button {
