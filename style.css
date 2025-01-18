@@ -13,6 +13,8 @@ body {
     padding: 25px;
     accent-color: var(--color-accent);
     font-family: var(--font-family);
+    background-color: #f4f4f4;
+    color: #333;
   }
 
 .menu {
@@ -101,12 +103,33 @@ h1 {
 }
 
 h2 {
+  font-size: 150%;
+  margin: 0;
+}
+
+h3 {
+  padding-top: 5px;
   margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6{
   line-height: 1.1;
   text-wrap: balance;
+}
+
+time{
+  font-weight: bold;
+  margin: 0;
+  padding-bottom: 0;
+}
+
+ul{
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+p {
+  padding-bottom: 5px;
 }
 
 /*
