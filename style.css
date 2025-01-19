@@ -76,6 +76,14 @@ form {
 button {
   text-align: center;
   justify-content: center;
+  margin: 0;
+  align-items: center;
+  cursor: pointer;
+  display: inline-flex;
+}
+
+button:hover {
+  background-color: var(--color-accent); /* Change background color on hover */
 }
 
 label, button {
@@ -133,6 +141,12 @@ p {
 }
 
 img {
+  width: 100%;    /* Make image width responsive to the container */
+  height: auto;   /* Maintain aspect ratio */
+  max-width: 100%; /* Prevent image from growing larger than its container */
+}
+
+.logo {
   width: 100%;    /* Make image width responsive to the container */
   height: auto;   /* Maintain aspect ratio */
   max-width: 100%; /* Prevent image from growing larger than its container */
