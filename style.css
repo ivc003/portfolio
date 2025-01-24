@@ -22,7 +22,7 @@ body {
   justify-content: center;
 }
 
-.menu ul {
+.ul {
   padding: 0;
   margin: 0;
   display: flex;
@@ -32,14 +32,14 @@ body {
 }
 
 
-.menu li a {
+.menu a {
   text-decoration: none;
   display: flex;
   padding: 0.5em 2em;
   margin: 0;
 }
 
-.menu li a:hover {
+.menu a:hover {
   background-color: oklch(from var(--color-accent) 95% 5% h);
   border-bottom: 0.4em solid var(--color-accent); 
   padding-bottom: 0.5em;
