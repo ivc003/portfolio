@@ -5,7 +5,7 @@ function $$(selector, context = document) {
 }
 
 let pages = [
-    { url: '', title: 'Home' },
+    { url: 'portfolio/', title: 'Home' },
     { url: 'portfolio/projects/', title: 'Projects' },
     { url: 'portfolio/contact/', title: 'Contact'},
     { url: 'portfolio/resume/', title: 'Resume'},
@@ -22,7 +22,7 @@ for (let p of pages) {
     let title = p.title;
     const ARE_WE_HOME = document.documentElement.classList.contains('home');
 
-    if (!ARE_WE_HOME && !url.startsWith('http')) {
+    if (title!== 'Home' && !url.startsWith('http')) {
         url = '../../' + url;
       }
 
