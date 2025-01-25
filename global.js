@@ -22,7 +22,7 @@ for (let p of pages) {
     let title = p.title;
     const ARE_WE_HOME = document.documentElement.classList.contains('home');
 
-    if (!ARE_WE_HOME && !url.startsWith('http')) {
+    if (!url.startsWith('http')) {
         url = '../../' + url;
       }
 
