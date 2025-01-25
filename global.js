@@ -60,7 +60,7 @@ const savedColorScheme = localStorage.getItem('colorScheme');
 console.log('Current color scheme:', savedColorScheme);
 
 if (savedColorScheme) {
-    // If a saved color scheme exists, apply it
+    // If a saved color scheme exists
     document.documentElement.style.setProperty('color-scheme', savedColorScheme);
     select.value = 'auto'; // Set the dropdown to match the saved value
   } else {
