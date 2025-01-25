@@ -12,6 +12,7 @@ let pages = [
     { url: 'https://github.com/ivc003', title: 'Profile'}
   ];
 
+
 let nav = document.createElement('nav');
 nav.classList.add('menu');
 document.body.prepend(nav);
@@ -39,6 +40,40 @@ for (let p of pages) {
 
     nav.append(a);
   }
+
+
+document.body.insertAdjacentHTML(
+    'afterbegin',
+    `
+        <label class="color-scheme">
+            Theme:
+            <select id="theme-selector">
+                <option value="auto">Automatic</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+        </label>`
+    );
+
+const select = document.querySelector('#theme-selector');
+const savedColorScheme = localStorage.getItem('colorScheme');
+console.log('Current color scheme:', savedColorScheme);
+
+if (savedColorScheme) {
+    // If a saved color scheme exists, apply it
+    document.documentElement.style.setProperty('color-scheme', savedColorScheme);
+    select.value = 'auto'; // Set the dropdown to match the saved value
+  } else {
+    // If no saved color scheme, set it to 'auto'
+    select.value = 'auto';
+  }
+
+select.addEventListener('input', function (event) {
+    document.documentElement.style.setProperty('color-scheme', event.target.value);
+    localStorage.setItem('colorScheme', event.target.value);
+
+    console.log('New color scheme:', event.target.value);
+});
 
 
 // const navLinks = $$("nav a");
