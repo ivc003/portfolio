@@ -1,9 +1,11 @@
+// Checking that it's alive
 console.log('IT’S ALIVE!!');
 
 function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
 }
 
+// Remove in the future portfolio/ for live server
 let pages = [
     { url: 'portfolio/', title: 'Home' },
     { url: 'portfolio/projects/', title: 'Projects' },
@@ -41,7 +43,6 @@ for (let p of pages) {
     nav.append(a);
   }
 
-
 document.body.insertAdjacentHTML(
     'afterbegin',
     `
@@ -74,17 +75,3 @@ select.addEventListener('input', function (event) {
 
     console.log('New color scheme:', event.target.value);
 });
-
-
-// const navLinks = $$("nav a");
-// console.log(navLinks);
-// console.log([1, 2, 3, 4].find(n => n > 2));
-// console.log(location.host);
-
-// let currentLink = navLinks.find(
-//     (a) => a.host === location.host && a.pathname === location.pathname
-//   );
-
-// currentLink?.classList.add('current');
-
-// console.log(currentLink);

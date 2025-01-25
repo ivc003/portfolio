@@ -165,15 +165,3 @@ img {
   max-width: 100%; /* Prevent image from growing larger than its container */
 }
 
-/*
-form, input, textarea, button {
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-label {
-  display: block;
-  margin-block: 5px;
-}
-*/
