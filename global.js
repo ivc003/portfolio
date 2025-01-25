@@ -6,9 +6,9 @@ function $$(selector, context = document) {
 
 let pages = [
     { url: '', title: 'Home' },
-    { url: 'projects/', title: 'Projects' },
-    { url: 'contact/', title: 'Contact'},
-    { url: 'resume/', title: 'Resume'},
+    { url: 'portfolio/projects/', title: 'Projects' },
+    { url: 'portfolio/contact/', title: 'Contact'},
+    { url: 'portfolio/resume/', title: 'Resume'},
     { url: 'https://github.com/ivc003', title: 'Profile'}
   ];
 
@@ -23,7 +23,7 @@ for (let p of pages) {
     const ARE_WE_HOME = document.documentElement.classList.contains('home');
 
     if (!ARE_WE_HOME && !url.startsWith('http')) {
-        url = '../portfolio/' + url;
+        url = '../' + url;
       }
 
     let a = document.createElement('a');
