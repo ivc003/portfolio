@@ -2,19 +2,19 @@
     {
         "title": "Data Visualization 101",
         "year": "2024",
-        "image": "../../images/Project_1_Visualizations.png",
+        "image": "../images/Project_1_Visualizations.png",
         "description": "A simple (but still effective) visualization that demonstrates some of the principles of effectiveness in data visualization. Created with a unique combination of data cleaning, aggregation, and visualization tools."
     },
     {
         "title": "An Investigation on Nutrition",
         "year": "2023",
-        "image": "../../images/investigation_of_nutrition.png",
+        "image": "../images/investigation_of_nutrition.png",
         "description": "A partner project investigating the effect of nutrition on people's percptions of health and our diet culture. Based on a dataset that scrapped thousands of online recipes to build a linear regression model to predict calories."
     },
     {
         "title": "N-Gram Language Model",
         "year": "2023",
-        "image": "../../images/llm_explanation.png",
+        "image": "../images/llm_explanation.png",
         "description": "A direct approach to a language model that builds on the foundations of probability to create text based on a fixed size window of previous words. "
     },
     {
