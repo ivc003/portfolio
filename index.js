@@ -1,7 +1,7 @@
-import { fetchGitHubData, fetchJSON, renderProjects } from 'global.js';
+import { fetchGitHubData, fetchJSON, renderProjects } from './global.js';
 
 async function loadData() {
-    const projects = await fetchJSON('../lib/projects.json');
+    const projects = await fetchJSON('./lib/projects.json');
     const latestProjects = projects.slice(0, 3);
     console.log('it worked kinda?')
 
