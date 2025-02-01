@@ -97,11 +97,18 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
   // Your code will go here
   containerElement.innerHTML = '';
 
+  for (let p in project) {
   const article = document.createElement('article');
   article.innerHTML = `
-    <h2>${project.title}</h2>
-    <img src="${project.image}" alt="${project.title}">
-    <p>${project.description}</p>
+    <h2>${project[p].title}</h2>
+    <img src="${project[p].image}" alt="${project[p].title}">
+    <p>(${project[p].year}) ${project[p].description}</p>
 `;
+
   containerElement.appendChild(article);
+}
+}
+
+export async function fetchGitHubData(username) {
+  return fetchJSON(`https://api.github.com/users/${username}`);
 }

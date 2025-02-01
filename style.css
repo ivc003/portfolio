@@ -113,6 +113,7 @@ label, button {
 }
 
 article{
+  grid-template-rows: subgrid;
   display: grid;
   grid-row: span 3;
   gap: 1em;
@@ -165,3 +166,20 @@ img {
   max-width: 100%; /* Prevent image from growing larger than its container */
 }
 
+dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Create 4 equal-sized columns */
+  gap: 10px; /* Optional: Adds space between grid items */
+}
+
+/* Place <dt> (terms) on the first row */
+dt {
+  grid-row: 1;
+  font-weight: bold; /* Optional: make <dt> bold */
+}
+
+/* Place <dd> (descriptions) on the second row */
+dd {
+  grid-row: 2;
+  margin: 0; /* Optional: removes default margin for <dd> */
+}
