@@ -2,72 +2,72 @@
     {
         "title": "Data Visualization 101",
         "year": "2024",
-        "image": "../images/Project_1_Visualizations.png",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "A simple (but still effective) visualization that demonstrates some of the principles of effectiveness in data visualization. Created with a unique combination of data cleaning, aggregation, and visualization tools."
     },
     {
         "title": "An Investigation on Nutrition",
         "year": "2023",
-        "image": "../images/investigation_of_nutrition.png",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "A partner project investigating the effect of nutrition on people's percptions of health and our diet culture. Based on a dataset that scrapped thousands of online recipes to build a linear regression model to predict calories."
     },
     {
         "title": "N-Gram Language Model",
         "year": "2023",
-        "image": "../images/llm_explanation.png",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "A direct approach to a language model that builds on the foundations of probability to create text based on a fixed size window of previous words. "
     },
     {
-        "title": "Quod odio nam qui.",
-        "year": "2024",
+        "title": "Titanic Survivor Classification Model",
+        "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Enim tempora, a iste dolore deleniti officia odit eligendi, reprehenderit odio non quibusdam illo veniam accusantium voluptate. Adipisci recusandae quo dolorem consequuntur dolorum eius, repellendus voluptas ab aut possimus? Sed."
     },
     {
-        "title": "Ullam pariatur aliquam voluptatibus!",
+        "title": "Personal Website",
         "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Unde tempora veniam enim, minus alias sequi repellendus vitae nam quod hic fugit suscipit iste voluptatum nisi quisquam. Ipsum inventore est nostrum quasi rerum ipsam quos. Necessitatibus id quo ratione."
     },
     {
-        "title": "Aperiam ex ad sit.",
-        "year": "2024",
+        "title": "Scripps Maternal Health Project",
+        "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Enim est maiores aliquid culpa. Modi non reiciendis totam tempore itaque voluptatibus veritatis ex esse dolores deserunt eligendi, illum omnis perferendis laboriosam distinctio beatae repudiandae id minima, alias tempora temporibus."
     },
     {
-        "title": "Harum possimus saepe repellendus!",
-        "year": "2024",
+        "title": "Snake Game",
+        "year": "2022",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Iste laborum quia ea placeat commodi quos, incidunt quibusdam atque ducimus ipsa officia, quasi modi porro. Quos quo, architecto exercitationem a repellat molestias fugit illum ipsa. Alias vitae ad unde."
     },
     {
-        "title": "Unde atque velit quia!",
-        "year": "2024",
+        "title": "Flappy Bird Game",
+        "year": "2021",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "At, nostrum atque. Odit amet architecto quis maxime eligendi nobis alias ducimus, asperiores facere magni nesciunt consequuntur dolor fuga, labore vero a laudantium? Soluta nihil alias cupiditate repellat, rem iste."
     },
     {
-        "title": "Fuga voluptatibus perferendis eos.",
-        "year": "2024",
+        "title": "Dinosaur Game",
+        "year": "2021",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Fugit explicabo laudantium officia odit ipsum inventore, assumenda totam culpa voluptate nemo debitis harum molestiae perspiciatis repellat aliquam, mollitia quisquam tempore sed dicta sit tempora, porro eius laboriosam. Quia, aperiam."
     },
     {
-        "title": "Ullam architecto iure quibusdam?",
-        "year": "2024",
+        "title": "Introduction to Java",
+        "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Accusantium incidunt a tempora, voluptatum iste praesentium tenetur eius id, quaerat, labore corrupti veritatis earum laboriosam sequi voluptatem. Ea inventore cumque repellendus voluptatum non culpa, quo nostrum qui reprehenderit fugiat?"
     },
     {
-        "title": "Quod sapiente quibusdam accusantium!",
-        "year": "2024",
+        "title": "Introduction to Dictionaries and Other Data Management",
+        "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Ipsam ab hic reiciendis illum perferendis eaque, commodi voluptate nihil nesciunt dolor repellat officia aperiam soluta iure quos fuga, minus, earum saepe necessitatibus laborum dicta iste debitis id! Quibusdam, consequatur."
     },
     {
-        "title": "Ad ipsum obcaecati dolore.",
-        "year": "2024",
+        "title": "Introduction to Python",
+        "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Enim rem fugiat expedita, eveniet tempore incidunt debitis dolore! Necessitatibus ullam magnam optio cupiditate molestias provident mollitia. Temporibus optio eveniet sit a delectus, provident iusto laborum commodi consequatur. At, velit."
     }
