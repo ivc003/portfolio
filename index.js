@@ -1,4 +1,41 @@
-import { fetchGitHubData, fetchJSON, renderProjects } from 'portfolio/global.js';
+// import { fetchGitHubData, fetchJSON, renderProjects } from 'portfolio/global.js';
+
+async function fetchJSON(url) {
+    try {
+        // Fetch the JSON file from the given URL
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error(`Failed to fetch projects: ${response.statusText}`);
+      }
+      console.log(response)
+      const data = await response.json();
+      return data;
+  
+  
+    } catch (error) {
+        console.error('Error fetching or parsing JSON data:', error);
+    }
+  }
+  
+  function renderProjects(project, containerElement, headingLevel = 'h2') {
+    // Your code will go here
+    containerElement.innerHTML = '';
+  
+    for (let p in project) {
+    const article = document.createElement('article');
+    article.innerHTML = `
+      <h2>${project[p].title}</h2>
+      <img src="${project[p].image}" alt="${project[p].title}">
+      <p>(${project[p].year}) ${project[p].description}</p>
+  `;
+  
+    containerElement.appendChild(article);
+  }
+  }
+  
+  async function fetchGitHubData(username) {
+    return fetchJSON(`https://api.github.com/users/${username}`);
+  }
 
     const projects = await fetchJSON('./lib/projects.json');
     const latestProjects = projects.slice(0, 3);
