@@ -99,10 +99,15 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
 
   for (let p in project) {
   const article = document.createElement('article');
+
+  // Create a wrapper div for description and year
+  const descriptionYearWrapper = document.createElement('div');
+  descriptionYearWrapper.style.fontFamily = 'Baskerville, serif'
+
   article.innerHTML = `
     <h2>${project[p].title}</h2>
     <img src="${project[p].image}" alt="${project[p].title}">
-    <p>(${project[p].year}) ${project[p].description}</p>
+    <div>${project[p].description}<br> <p>(C. ${project[p].year})</p> </div>
 `;
 
   containerElement.appendChild(article);

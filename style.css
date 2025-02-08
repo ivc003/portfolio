@@ -183,3 +183,12 @@ dd {
   grid-row: 2;
   margin: 0; /* Optional: removes default margin for <dd> */
 }
+
+/* working on pie plot now in projects */
+
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+
+  overflow: visible;
+}
