@@ -189,6 +189,51 @@ dd {
 #projects-pie-plot {
   max-width: 20em;
   margin-block: 2em;
-
+  margin-right: 20px;
   overflow: visible;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.legend {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(7em, 1fr));  /* Auto-fill columns with a minimum width of 9em */
+  gap: 5px;  /* Space between items */
+  flex: 1;
+
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px; /* Space between legend items */
+
+}
+
+.legend .swatch {
+  width: 20px; /* Size of the swatch square */
+  height: 20px; /* Size of the swatch square */
+  aspect-ratio: 1 / 1; /* Ensure the swatch is a square */
+  background-color: var(--color); /* Use the --color variable for the color */
+  margin-right: 10px; /* Space between swatch and label */
+  border-radius: 5px; /* Optional: add some rounded corners */
+}
+
+
+/* The search bar itself */
+.searchBar {
+  display: flex;
+  width: 100%;
+  flex-grow: 1; /* Makes the search bar grow to fill available space */
+  padding: 10px; /* Adds padding inside the search bar */
+  border: 1px solid #ccc; /* Adds a border */
+  border-radius: 4px; /* Optional: adds rounded corners */
+  font-size: 16px; /* Adjust font size */
+  outline: none; /* Removes outline */
 }
