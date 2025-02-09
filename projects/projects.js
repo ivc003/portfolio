@@ -59,8 +59,30 @@ function renderPieChart(projectsGiven) {
   arcData.forEach((arc, i) => {
     svg.append('path')
       .attr('d', arcGenerator(arc))
-      .attr('fill', colors(i)) // Use the color scale for filling      
+      .attr('fill', colors(i)) // Use the color scale for filling
+      .on('click', () => {
+        // Toggle selection (deselect if clicked again)
+        selectedIndex = selectedIndex === i ? -1 : i;
+
+        // Update pie slices with the 'selected' class for the selected index
+        svg.selectAll('path')
+          .attr('class', (_, idx) => (idx === selectedIndex ? 'selected' : ''));
+
+        // Update legend items with the 'selected' class
+        d3.select('.legend').selectAll('li')
+          .attr('class', (_, idx) => (idx === selectedIndex ? 'selected' : ''));
+
+        // Filter projects and re-render them based on selected year
+        if (selectedIndex === -1) {
+          renderProjects(projects, projectsContainer, 'h2'); // Show all projects
+        } else {
+          // Filter projects by year (based on selected pie slice)
+          let selectedYear = data[selectedIndex].label;
+          let filteredProjects = projects.filter(project => project.year === selectedYear);
+          renderProjects(filteredProjects, projectsContainer, 'h2');
+        }
       });
+  });
 
   // Render the legend
   let legend = d3.select('.legend');
@@ -69,8 +91,33 @@ function renderPieChart(projectsGiven) {
     legend.append('li')
       .attr('style', `--color:${colors(i)}`)
       .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`)
+      .on('click', () => {
+        // Toggle selection on legend item click
+        selectedIndex = selectedIndex === i ? -1 : i;
+
+        // Update the pie chart slices with the 'selected' class
+        svg.selectAll('path')
+          .attr('class', (_, idx) => (idx === selectedIndex ? 'selected' : ''));
+
+        // Update the legend items with the 'selected' class
+        legend.selectAll('li')
+          .attr('class', (_, idx) => (idx === selectedIndex ? 'selected' : ''));
+
+        // Filter projects and re-render them based on selected year
+        if (selectedIndex === -1) {
+          renderProjects(projects, projectsContainer, 'h2'); // Show all projects
+        } else {
+          // Filter projects by year (based on selected legend item)
+          let selectedYear = data[selectedIndex].label;
+          let filteredProjects = projects.filter(project => project.year === selectedYear);
+          renderProjects(filteredProjects, projectsContainer, 'h2');
+        }
+      });
   });
 }
+
+// Call this function to render the initial pie chart and legend
+renderPieChart(projects);
 
 // Add event listener for search input (use `input` for real-time search)
 let searchInput = document.querySelector('.searchBar');
@@ -88,5 +135,4 @@ searchInput.addEventListener('input', (event) => {
   renderPieChart(filteredProjects); // Update the pie chart based on filtered projects
 });
 
-// Call this function to render the initial pie chart and legend
-renderPieChart(projects);
+
