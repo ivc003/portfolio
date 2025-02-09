@@ -237,3 +237,19 @@ dd {
   font-size: 16px; /* Adjust font size */
   outline: none; /* Removes outline */
 }
+
+&:has(path:hover) {
+  path:not(:hover) {
+    opacity: 0.5;
+  }
+}
+
+path {
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+    fill: var(--color-accent);
+}
