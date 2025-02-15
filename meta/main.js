@@ -128,6 +128,17 @@ function createScatterplot() {
   xScale.range([usableArea.left, usableArea.right]);
   yScale.range([usableArea.bottom, usableArea.top]);
 
+const gridlines = svg
+  .append('g')
+  .attr('class', 'gridlines')
+  .attr('transform', `translate(${usableArea.left}, 0)`);
+
+// Create gridlines as an axis with no labels and full-width ticks
+gridlines.call(d3.axisLeft(yScale).tickFormat('').tickSize(-usableArea.width))
+              .selectAll('.tick line') // Select all gridline ticks
+              .attr('stroke', 'lightgray') // Change the gridline color to a lighter shade
+              .attr('stroke-opacity', 0.5);
+
   // Create the axes
 const xAxis = d3.axisBottom(xScale);
 
@@ -156,5 +167,49 @@ dots
   .attr('cx', (d) => xScale(d.datetime))
   .attr('cy', (d) => yScale(d.hourFrac))
   .attr('r', 5)
-  .attr('fill', 'steelblue');
+  .attr('fill', 'steelblue')
+  .on('mouseenter', (event, commit) => {
+    updateTooltipContent(commit);  // Update tooltip content when hovering over a dot
+  })
+  .on('mouseleave', () => {
+    updateTooltipContent({});  // Clear the tooltip when leaving the dot
+  });
+}
+
+function updateTooltipContent(commit) {
+  const link = document.getElementById('commit-link');
+  const date = document.getElementById('commit-date');
+  const time = document.getElementById('commit-time');
+  const author = document.getElementById('commit-author');
+  const linesEdited = document.getElementById('commit-lines-edited');
+
+  // Clear content if commit is empty
+  if (Object.keys(commit).length === 0) {
+    link.href = '';
+    link.textContent = '';
+    date.textContent = '';
+    time.textContent = '';
+    author.textContent = '';
+    linesEdited.textContent = '';
+    return;
+  }
+
+  // Update tooltip content
+  link.href = commit.url;
+  link.textContent = commit.id;
+  date.textContent = commit.datetime?.toLocaleString('en', { dateStyle: 'full' });
+  time.textContent = commit.datetime?.toLocaleTimeString('en', { timeStyle: 'short' });
+  author.textContent = commit.author || 'Unknown Author';
+  linesEdited.textContent = commit.linesEdited || 'N/A';
+}
+
+function updateTooltipVisibility(isVisible) {
+  const tooltip = document.getElementById('commit-tooltip');
+  tooltip.hidden = !isVisible;
+}
+
+function updateTooltipPosition(event) {
+  const tooltip = document.getElementById('commit-tooltip');
+  tooltip.style.left = `${event.clientX}px`;
+  tooltip.style.top = `${event.clientY}px`;
 }

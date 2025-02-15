@@ -254,5 +254,46 @@ path {
     fill: var(--color-accent);
 }
 
+circle {
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+circle:hover {
+  transform: scale(1.5);
+}
+
+
+
+/* Tooltip Styling */
+dl.info {
+  display: grid;
+  grid-template-columns: 0.5fr 0.8fr; /* Labels on the left, values on the right */
+  margin: 0;
+  padding: 0.5em;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 5px;
+}
+
+dl.info dt {
+  font-weight: bold;
+  margin-bottom: 0.2em;
+}
+
+
+dl.info dd {
+  margin: 0 0 0em 0;
+}
+
+/* Tooltip position */
+.tooltip {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  pointer-events: none; /* Prevent the tooltip from blocking interactions */
+}
+
 
 
