@@ -169,10 +169,13 @@ dots
   .attr('r', 5)
   .attr('fill', 'steelblue')
   .on('mouseenter', (event, commit) => {
-    updateTooltipContent(commit);  // Update tooltip content when hovering over a dot
+    updateTooltipContent(commit);
+    updateTooltipVisibility(true);
+    updateTooltipPosition(event);
   })
   .on('mouseleave', () => {
-    updateTooltipContent({});  // Clear the tooltip when leaving the dot
+    updateTooltipContent({});
+    updateTooltipVisibility(false);
   });
 }
 
@@ -213,3 +216,5 @@ function updateTooltipPosition(event) {
   tooltip.style.left = `${event.clientX}px`;
   tooltip.style.top = `${event.clientY}px`;
 }
+
+updateTooltipVisibility(false);
